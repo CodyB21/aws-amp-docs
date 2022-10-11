@@ -4,6 +4,7 @@ frontend:
     preBuild:
       commands:
         - /bin/bash -c "pip3 install mkdocs --user --no-cache-dir"
+        - /bin/bash -c "pip3 install -r requirements.txt"
     build:
       commands:
         - /bin/bash -c "mkdocs build"
