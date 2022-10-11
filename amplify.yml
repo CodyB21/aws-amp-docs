@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - /bin/bash -c "pip3 install mkdocs --user --no-cache-dir"
+        - /bin/bash -c "pip3 install -r requirements.txt"
+    build:
+      commands:
+        - /bin/bash -c "mkdocs build"
+  artifacts:
+    baseDirectory: site
+    files:
+      - '**/*'
+  cache:
+    paths: []
