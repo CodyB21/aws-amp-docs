@@ -1,0 +1,131 @@
+site_name: Справочная информация
+site_description: Справочная информация размещенная на AWS Amplify
+site_author: IC / CB 
+repo_name: aws-amp-docs
+repo_url: https://github.com/CodyB21/aws-amp-docs
+# edit_uri: edit/main/docs/docs
+copyright: Copyright &copy; 2022 IC/CB
+markdown_extensions:
+  - tables
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - codehilite:
+      linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+        options:
+          custom_icons:
+            - overrides/.icons
+  - pymdownx.highlight:
+      # anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+      # custom_fences:
+      #   - name: mermaid
+      #     class: mermaid
+      #     format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      # alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: img/favicon.ico
+  logo: img/apple-touch-icon.png
+  static_templates:
+    - 404.html
+  # Omit mkdocs javascript
+  include_search_page: false
+  search_index_only: true
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: "indigo"
+      accent: "orange"
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      primary: "indigo"
+      accent: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+plugins:
+  - search:
+      lang: 
+        - en
+        - ru
+  - mknotebooks
+  - git-revision-date-localized
+  - git-authors
+extra_css:
+  - css/extra.css
+docs_dir: docs
+nav:
+  - Главная: index.md
+  - Описание: 
+    - Top: section1/section1.md
+    - Same:
+      - Sub-Section 1.1:
+        - Базовая: section1/section1.1/section1.1.md
+        - Дополнитеальная:  section1/section1.2/section1.2.md
+      - Sub-Section 3.1:
+        - Базовая3: section3/section3.1/section3.1.md
+        - Дополнитеальная3:  section3/section3.2/section3.2.md
+extra:
+  collapse_toc: true
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/CodyB21/aws-amp-docs
+  manifest: "manifest.webmanifest"

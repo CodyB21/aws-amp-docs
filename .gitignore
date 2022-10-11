@@ -1,7 +1,11 @@
+# local version of the site
+site/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+.env*
 
 # C extensions
 *.so
